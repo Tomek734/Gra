@@ -19,7 +19,7 @@ def main():
             if co_chcesz_zrobić_n.lower() == 'k':
                 bohater.sprawdzian()
             elif co_chcesz_zrobić_n.lower() == 'o':
-                
+                d
         elif 'Uczen' in bohater.name:
             print('Idź na lekcję - l | Idź na wagary - w | Informacje - i')
             co_chcesz_zrobić_u = input("Co chcesz zrobić?\t")

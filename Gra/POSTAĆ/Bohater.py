@@ -147,5 +147,7 @@ class Bohater(Postać):
                 inp=randint(30,60)
                 self.p-=inp
                 print(f'Tracisz {inp} punktów')
-    
+    def odp(self):
+        print('Bierzesz ucznia do odpowiedzi')
+        if i==0
 
