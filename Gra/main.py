@@ -20,6 +20,9 @@ def main():
                 bohater.sprawdzian()
             elif co_chcesz_zrobić_n.lower() == 'o':
                 bohater.pytanie()
+            else:
+                print("Nie ma takiej komendy")
+                x-=1
         elif 'Uczen' in bohater.name:
             print('Idź na lekcję - l | Idź na wagary - w | Informacje - i')
             co_chcesz_zrobić_u = input("Co chcesz zrobić?\t")

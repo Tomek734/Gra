@@ -5,4 +5,4 @@ class Kolega(Postać):
     def oferta(self):
         print('Mogę odsprzedać Ci ściąge przydatną na lekcji')
         print('Jęśli chcesz skorzystać z ofrty napisz tak')
-        print('Jeśli nie naisz nie')
+        print('Jeśli nie napisz nie')

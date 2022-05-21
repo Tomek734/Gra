@@ -47,25 +47,28 @@ class Bohater(Postać):
     def walka(self, Dres):
         print(f'Spotykasz dresa {Dres.name}')
         print('Możesz z nim waliczyć-a lub uciekać-b')
-        inp=input('')
-        if inp=='a':
-            if self.p>Dres.p:
-                self.p+=20
-                print(f"Wygrywasz walkę {self.p}")
+        while True:
+            inp=input('')
+            if inp=='a':
+                if self.p>Dres.p:
+                    self.p+=20
+                    print(f"Wygrywasz walkę {self.p}")
+                else:
+                    self.p-= randint(20,30)
+                    print(f"Dres okazał się być śilniejszy {self.p}")
+            elif inp=='b':
+                inp=choice(['v','n','g'])
+                if inp=='v' or 'g':
+                    self.p+=30
+                    print('Byłeś szybszy udało ci się uciec')
+                    print('Otrzymujesz 30 punktów')
+                elif inp=='n':
+                    inp=randint(60,120)
+                    self.p-=inp
+                    print('Dres cię dogonił i porządnie sprał')
+                    print(f'Tracisz {inp} punktów')
             else:
-                self.p-= randint(20,30)
-                print(f"Dres okazał się być śilniejszy {self.p}")
-        elif inp=='b':
-            inp=choice(['v','n','g'])
-            if inp=='v' or 'g':
-                self.p+=30
-                print('Byłeś szybszy udało ci się uciec')
-                print('Otrzymujesz 30 punktów')
-            elif inp=='n':
-                inp=randint(60,120)
-                self.p-=inp
-                print('Dres cię dogonił i porządnie sprał')
-                print(f'Tracisz {inp} punktów')
+                print('Wybierz jedną z opcji')
     def informacje(self):
         print(f'Twoja nazwa\t{self.name}')
         print(f'Ilość p\t{self.p}')
